@@ -22,12 +22,12 @@ const loginUser = async ({ email, password }) => {
     });
 
     if (!user) {
-        throw new Error('User not found');
+        return null;
     }
 
     const isMatch = await bcrypt.compare(password, user.password);
     if (!isMatch) {
-        throw new Error('Invalid credentials');
+        return null;
     }
 
     return user;

@@ -4,6 +4,10 @@ async function rateLimiter(req, res, next) {
     const ip = req.ip;
     const key = `rate_limit:${ip}`;
 
+    if (!redisClient.isReady) {
+        return next();
+    }
+
     try {
         const record = await redisClient.get(key);
         if (record) {
