@@ -1,0 +1,26 @@
+Stack
+Node.js + TypeScript/JavaScript
+Express.js / Fastify
+PostgreSQL
+Sequelize / Prisma
+Redis
+REST API
+
+Requirements
+Implement User registration and login.
+Implement JWT-based authentication.
+Create protected APIs that require authentication.
+Implement a Redis-based API rate limiter.
+Allow a maximum of 5 login attempts per IP within 1 minute.
+Temporarily block further login attempts after the limit is exceeded.
+Use Redis TTL/expiration for rate-limit management.
+Implement proper HTTP status codes such as 429 Too Many Requests.
+Store user information in PostgreSQL using Sequelize/Prisma.
+Implement secure password hashing.
+Handle Redis failures gracefully.
+Follow a clean, scalable, and modular project structure.
+
+Submission Requirements
+Create a Git repository and push the project to GitHub.
+Include a README.md containing:
+Include a .env file with the required environment variables.
